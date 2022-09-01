@@ -1,0 +1,28 @@
+/* Globals */
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+}
+.nav-list ul {
+  display: flex;
+}
+.nav-list ul li {
+  margin-left: 50px;
+}
+.nav-list ul li:first-child {
+  margin-left: 0;
+}
