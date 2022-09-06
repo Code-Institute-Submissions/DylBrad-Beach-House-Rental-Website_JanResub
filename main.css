@@ -1,28 +1,229 @@
 /* Globals */
-body {
-  margin: 10px;
+*{
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  color: var(--primary-color);
 }
-
+:root {
+  --main-font: 'Kanit', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
+  --primary-color: #43494B;
+  --secondary-color: #e3a44dff;
+}
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
+  color: var(--primary-color);
+}
+p {
+  font-family: var(--secondary-font);
+}
+section {
+  padding: 0 40px;
 }
 
 /* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: lightblue;
+.header{
+  top: 0;
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: 20px;
+  padding: 30px 15px;
 }
-.nav-list ul {
-  display: flex;
+.nav-logo{
+  display: inline-block;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 23px;
 }
-.nav-list ul li {
-  margin-left: 50px;
+.nav-logo span {
+  font-weight: 200;
 }
-.nav-list ul li:first-child {
-  margin-left: 0;
+
+.nav-list {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.menu a{
+  display: block;
+  padding: 30px;
+  color: white;
+}
+.menu a:hover{
+  background-color: var(--secondary-color);
+}
+.nav-list {
+  display: none
+}
+
+.hamburger {
+  cursor: pointer;
+  float: right;
+  padding: 20px 20px;
+  z-index: 1;
+  position: relative;
+}
+.hamb-layer {
+  background: var(--primary-color);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+  .hamb-layer::before,
+  .hamb-layer::after {
+    background: var(--primary-color);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  .hamb-layer::before {
+    top: 8px;
+  }
+  .hamb-layer::after {
+    top: -8px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  /** toggle hamburger **/
+  .hamburger-menu:checked ~ .nav-list {
+    display: block;
+  }
+  .hamburger-menu:checked ~ .hamburger .hamb-layer {
+    background: transparent;
+  }
+  .hamburger-menu:checked ~ .hamburger .hamb-layer::before {
+    transform: rotate(-45deg);
+    background: white;
+    top: 0
+  }
+  .hamburger-menu:checked ~ .hamburger .hamb-layer::after {
+    transform: rotate(45deg);
+    background: white;
+    top: 0
+  }
+
+/* Responsive Header */
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .nav-list {
+    display: contents;
+    background-color: white;
+    width: auto;
+    height: auto;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu a {
+    color: var(--primary-color);
+  }
+  .menu a:last-of-type {
+    padding-right: 0;
+  }
+  .menu a:hover{
+    background-color: white;
+      color: var(--secondary-color);
+      margin-bottom: 1px solid var(--secondary-color);
+  }
+  .hamburger {
+      display: none;
+  }
+}
+
+/* main section */
+.intro-section {
+  padding-top: 40px;
+}
+.intro-section-header h1 span {
+  font-size: 69px;
+  font-weight: 300;
+  font-family: var(--main-font);
+  color: var(--primary-color);
+  position: absolute;
+  font-weight: 100;
+  line-height: 1.3;
+}
+.intro-section .img-container {
+  width: 66%;
+  float: right;
+  text-align: center;
+}
+.intro-section .img-container img {
+  width: 100%;
+}
+.intro-section .section-details {
+  float: left;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  text-align: right;
+}
+.book-now {
+  margin-top: 40px;
+  padding: 10px 15px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background-color: orange;
+  font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .intro-section-header h1 span {
+    position: relative;
+    font-size: 57px;
+  }
+  .intro-section-header h1 span br {
+    display: none;
+  }
+  .intro-section .section-details {
+    top: 35%;
+  }
+}
+@media (max-width: 810px) {
+  .intro-section .img-container {
+    width: 100%;
+    float: none;
+  }
+  .intro-section-header {
+    padding: 0 10%;
+    text-align: center;
+  }
+  .intro-section-header h1 span {
+    font-size: 47px;
+  }
+  .intro-section .section-details {
+    float: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    text-align: center;
+    padding: 0 10%;
+  }
+}
+
+/* second section */
+.clear {
+  clear: both;
+  font-family: var(--main-font);
+  font-weight: 100;
 }

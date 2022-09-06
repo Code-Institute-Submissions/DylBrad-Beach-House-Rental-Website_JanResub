@@ -6,19 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beach House</title>
   <link rel="stylesheet" href="main.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap'); 
+  </style>
 </head>
 <body>
-    <header>
-      <div class="nav-logo">Logo</div>
-      <div class="nav-list">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="#">Book</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </header>
-  <main>
-  </main>
+
+  <header class="header">
+    <div class="nav-logo">
+      Bella Vista<br><span>Beach House</span>
+    </div>
+    <!-- Hamburger -->
+    <input class="hamburger-menu" id="hamburger-menu" type="checkbox">
+    <label class="hamburger" for="hamburger-menu"><span class="hamb-layer"></span></label>
+    <!-- Nav Menu -->
+    <nav class="nav-list">
+      <ul class="menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">Book</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro-section">
+    <div class="intro-section-header">
+      <h1><span>Beach House <br>in Rio De Janeiro</span></h1>
+    </div>
+    <div class="img-container">
+      <img src="./static-files/img1.jpeg">
+    </div>
+    <div class="section-details">
+      <p>Relax and experience the amazing tranquility of the Brazilian coastline. Located in the most desireable state in Brazil, this property had a unique feeling of isolation, whilst also being in proximity to various local attractions.</p>
+      <button class="book-now">Book Now</button>
+    </div>
+  </section>
+
+  <section class="clear">
+    <p>Some other content</p>
+  </section>
 </body>
 </html>
