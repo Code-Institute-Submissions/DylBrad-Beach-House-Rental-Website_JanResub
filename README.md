@@ -57,4 +57,4 @@ Steps:
 - Under branch selest *main*
 - save
 
-The site can be found at: dylbrad.github.io 
+The site can be found at: https://dylbrad.github.io/Beach-House-Rental-Website/ 
