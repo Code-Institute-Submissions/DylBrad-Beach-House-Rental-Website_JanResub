@@ -44,3 +44,15 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flo
 
 https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css
 
+NOTE: CSS validator flagged CSS variables as issues. 
+
+# Deployment
+
+This website is hosted in GitHub pages.
+
+Steps:
+- In repository, go to *settings*
+- Under *code and automation* sidebar, select *pages*
+- Under source select *deploy from branch*
+- Under branch selest *main*
+- save
