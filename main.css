@@ -28,6 +28,12 @@ section {
 button {
   cursor: pointer;
 }
+.link {
+  color: var(--links-color);
+}
+.link:hover {
+  text-decoration: underline;
+}
 
 /* Header */
 .header{
@@ -482,6 +488,8 @@ form div {
 }
 .terms {
   font-size: .5em;
+  color: var(--links-color);
+  text-decoration: underline;
 }
 .terms-span {
   font-size: 1.1em;
