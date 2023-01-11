@@ -10,6 +10,7 @@
   --secondary-font: 'Open Sans', sans-serif;
   --primary-color: #43494B;
   --secondary-color: #e3a44dff;
+  --links-color: rgb(163, 15, 163);
 }
 li {
   list-style: none;
@@ -478,6 +479,14 @@ form div {
 }
 .dates div {
   width: 48%;
+}
+.terms {
+  font-size: .5em;
+}
+.terms-span {
+  font-size: 1.1em;
+  color: var(--links-color);
+  text-decoration: underline;
 }
 @media (max-width: 420px) {
   .dates {
