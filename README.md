@@ -22,7 +22,7 @@ Ths section includes an external link to additional resources about the country.
 
 The services section includes icons indicating the services available at the property.
 
-![Services icons](./assets/images/homepage.png)
+![Services icons](./assets/images/amenities-icons.png)
 
 ### *Homepage: The Property*
 
